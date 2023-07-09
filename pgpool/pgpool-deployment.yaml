@@ -26,7 +26,7 @@ spec:
             - name: PGPOOL_BACKEND_NODES
               value: 0:10.112.44.29:5432, 1:10.112.44.33:5432
             - name: PGPOOL_SR_CHECK_USER
-              value: "repmgr"
+              value: "pgpool_user"
             - name: PGPOOL_SR_CHECK_PASSWORD
               valueFrom:
                 secretKeyRef:
@@ -37,7 +37,7 @@ spec:
             - name: PGPOOL_ENABLE_LDAP
               value: "no"
             - name: PGPOOL_POSTGRES_USERNAME
-              value: "postgres"
+              value: "pgpool_user"
             - name: PGPOOL_POSTGRES_PASSWORD
               valueFrom:
                 secretKeyRef:
